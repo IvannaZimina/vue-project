@@ -10,6 +10,7 @@
     "format": "prettier --write --experimental-cli src/"
   },
   "dependencies": {
+    "primeicons": "^7.0.0",
     "vue": "^3.5.30"
   },
   "devDependencies": {
