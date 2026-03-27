@@ -1,12 +1,12 @@
 <script setup>
 import Hero from '@/components/Hero.vue';
 import HomeCards from '@/components/HomeCards.vue';
-import JobListings from '@/components/JobListings.vue';
+import ProductListings from '@/components/ProductListings.vue';
 
 </script>
 
 <template>
   <Hero />
   <HomeCards />
-  <JobListings :limit="3" :showButtons="true" />
+  <ProductListings :limit="3" :showButtons="true" />
 </template>
