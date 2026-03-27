@@ -6,10 +6,10 @@ import { RouterLink } from 'vue-router';
     <section>
       <div class="container m-auto py-6 px-6">
         <RouterLink
-          to="/jobs"
-          class="text-green-500 hover:text-green-600 flex items-center"
+          to="/products"
+          class="text-indigo-500 hover:text-indigo-600 flex items-center"
         >
-          <i class="pi pi-arrow-left mr-3"></i> Back to Job Listings
+          <i class="pi pi-arrow-left mr-3"></i> Back to Product Listings
         </RouterLink>
       </div>
     </section>
