@@ -1,38 +1,87 @@
-# vue-project
+# Online Storefront
 
-This template should help get you started developing with Vue 3 in Vite.
+An educational SPA built with Vue 3 + Vite, featuring local product CRUD.
 
-## Recommended IDE Setup
+## Features
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+- Browse the product list
+- Open product details by id
+- Add a product
+- Edit a product
+- Delete a product
+- Toast notifications
+- Product image validation:
+  - If the URL does not end with an image extension, a default image is used
+  - If the image URL fails to load, the UI falls back to the default image
 
-## Recommended Browser Setup
+## Tech Stack
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+- Vue 3
+- Vue Router
+- Vite
+- Tailwind CSS
+- Axios
+- json-server
+- vue-toastification
 
-## Customize configuration
+## Data Source
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+Local database file:
 
-## Project Setup
+- `src/products.json`
 
-```sh
+json-server exposes this endpoint:
+
+- `http://localhost:5000/products`
+
+The frontend uses the Vite proxy route:
+
+- `/api/products`
+
+## Installation
+
+```bash
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+## Development Run
 
-```sh
+Run 2 processes in separate terminals.
+
+1. Local API (json-server):
+
+```bash
+npm run server
+```
+
+2. Vite dev server:
+
+```bash
 npm run dev
 ```
 
-### Compile and Minify for Production
+After that, the app will be available at the Vite URL (usually `http://localhost:3000`).
 
-```sh
-npm run build
-```
+## Scripts
+
+- `npm run dev` - start frontend (Vite)
+- `npm run server` - start json-server on port 5000
+- `npm run build` - production build
+- `npm run preview` - preview production build
+- `npm run format` - format source files
+
+## Structure (Short)
+
+- `src/components` - UI components
+- `src/views` - app pages
+- `src/router` - routing
+- `src/assets` - styles and images
+- `src/products.json` - local product data
+
+## Important Notes
+
+- If you see a proxy error like `ECONNREFUSED`, `npm run server` is not running.
+- If you see `EADDRINUSE: 5000`, port 5000 is already occupied by another json-server process.
+- This project is intended for local use as an educational example with a file-based database.
+
+## Views
